@@ -1,4 +1,4 @@
-def decimal_to_binary(decimal_num):
+def decimal_to_binary(decimal_num):      # conversion method: divides the decimal number by 2 reapetedly and records the remainders.
     binary = ""
     while decimal_num > 0:
         remainder = decimal_num % 2
@@ -6,7 +6,7 @@ def decimal_to_binary(decimal_num):
         decimal_num //= 2
     return binary if binary else "0"
 
-def binary_to_decimal(binary_num):
+def binary_to_decimal(binary_num): # conversion method: this multiplies each binary digit by it's positional value and sums them up.
     decimal = 0
     power = 0
     for digit in binary_num[::-1]:
@@ -15,7 +15,7 @@ def binary_to_decimal(binary_num):
         power += 1
     return decimal
 
-def decimal_to_hexadecimal(decimal_num):
+def decimal_to_hexadecimal(decimal_num): # conversion method: Divides the decimal number by 16 repeatedly as hexadecimal is a base 16 system, records the remainders and maps them to hexadecimal digits
     hexadecimal = ""
     hex_digits = "0123456789ABCDEF"
     while decimal_num > 0:
@@ -24,22 +24,22 @@ def decimal_to_hexadecimal(decimal_num):
         decimal_num //= 16
     return hexadecimal if hexadecimal else "0"
 
-def hexadecimal_to_decimal(hexadecimal_num):
+def hexadecimal_to_decimal(hexadecimal_num): # multiplies each hexadecimal digit by it's positional value and sums them up
     decimal = 0
     hex_digits = "0123456789ABCDEF"
     for digit in hexadecimal_num:
         decimal = 16 * decimal + hex_digits.index(digit)
     return decimal
 
-def hexadecimal_to_binary(hexadecimal_num):
+def hexadecimal_to_binary(hexadecimal_num): # this function converts the hexadecimal number to decimal then binary using our preexisting functions
     decimal_num = hexadecimal_to_decimal(hexadecimal_num)
     return decimal_to_binary(decimal_num)
 
-def binary_to_hexadecimal(binary_num):
+def binary_to_hexadecimal(binary_num): # this function converts the bianry number to decimal then to hexadecimal
     decimal_num = binary_to_decimal(binary_num)
     return decimal_to_hexadecimal(decimal_num)
 
-def decimal_to_octal(decimal_num):
+def decimal_to_octal(decimal_num): # this function divides the decimal number by 8 repeatedly and recors the remainders
     octal = ""
     while decimal_num > 0:
         remainder = decimal_num % 8
@@ -47,7 +47,7 @@ def decimal_to_octal(decimal_num):
         decimal_num //= 8
     return octal if octal else "0"
 
-def octal_to_decimal(octal_num):
+def octal_to_decimal(octal_num): # this function multiplies each octal digit by it's positional value and sums them up
     decimal = 0
     power = 0
     for digit in octal_num[::-1]:
@@ -56,6 +56,7 @@ def octal_to_decimal(octal_num):
     return decimal
 
 def main():
+    print("Hello my name is Isaiah Halsey and Here is my conversion calculator program which allows you to convert numbers into different bases for your needs")
     while True:
         print("\nChoose conversion:")
         print("1. Decimal to Binary")
